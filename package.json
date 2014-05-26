@@ -1,0 +1,34 @@
+{
+    "name": "clever-injector",
+    "description": "Lightning-fast flexible non-blocking Dependency Injection.",
+    "version": "1.0.0",
+    "private": false,
+    "repository":
+    { 
+        "type" : "git", 
+        "url" : "http://github.com/CleverStack/clever-injector.git"
+    },
+    "main": "injector.js",
+    "scripts": {
+        "test": "mocha --require should --reporter spec"
+    },
+    "dependencies": {
+        "async": "~0.2.9",
+        "underscore": "~1.5.2"
+    },
+    "devDependencies": {
+        "mocha": "*",
+        "should": "*",
+        "sinon": "*"
+    },
+    "author": {
+        "name": "Richard Gustin (PilsY)",
+        "email": "richard@clevertech.biz"
+    },
+    "keywords": [
+        "di",
+        "dependency injection",
+        "injector",
+        "inject"
+    ]
+}
