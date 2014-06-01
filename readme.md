@@ -1,4 +1,9 @@
 # Cleverstack Injector Module
+
+[![Build Status](http://img.shields.io/travis/CleverStack/clever-injector.svg)](https://travis-ci.org/CleverStack/clever-injector) [![Code Climate](https://codeclimate.com/github/CleverStack/clever-injector.png)](https://codeclimate.com/github/CleverStack/clever-injector) [![Dependency Status](https://david-dm.org/CleverStack/clever-injector.svg?theme=shields.io)](https://david-dm.org/CleverStack/clever-injector) [![devDependency Status](https://david-dm.org/CleverStack/clever-injector/dev-status.svg?theme=shields.io)](https://david-dm.org/CleverStack/clever-injector#info=devDependencies)
+
+![CleverStack Node Seed](http://cleverstack.github.io/assets/img/logos/node-seed-logo-clean.png "CleverStack Node Seed")
+
 NodeJS Dependency Injection for the CleverStack ecosystem, designed to work with or without CleverStack.
 
 ## Important
