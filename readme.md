@@ -11,6 +11,11 @@ NodeJS Dependency Injection for the CleverStack ecosystem, designed to work with
 ## Important
 If you are using the CleverStack framework you do not need to install or setup the injector, CleverStack comes out of the box with the injector ready to use.
 
+### Features
+1. Non-blocking and fully async
+2. Load's resources based upon name for you and injects dependencies
+3. Will never load the same resource more than once, it uses the one singular instance for all dependencies
+
 ### Install 
 ```
 npm i clever-injector
