@@ -1,6 +1,8 @@
 # Cleverstack Injector Module
 
-[![Build Status](http://img.shields.io/travis/CleverStack/clever-injector.svg)](https://travis-ci.org/CleverStack/clever-injector) [![Code Climate](https://codeclimate.com/github/CleverStack/clever-injector.png)](https://codeclimate.com/github/CleverStack/clever-injector) [![Dependency Status](https://david-dm.org/CleverStack/clever-injector.svg?theme=shields.io)](https://david-dm.org/CleverStack/clever-injector) [![devDependency Status](https://david-dm.org/CleverStack/clever-injector/dev-status.svg?theme=shields.io)](https://david-dm.org/CleverStack/clever-injector#info=devDependencies)
+[![NPM version](https://badge.fury.io/js/clever-injector.png)](http://badge.fury.io/js/clever-injector) [![GitHub version](https://badge.fury.io/gh/cleverstack%2Fclever-injector.png)](http://badge.fury.io/gh/cleverstack%2Fclever-injector) [![Dependency Status](https://david-dm.org/CleverStack/clever-injector.png)](https://david-dm.org/CleverStack/clever-injector) [![devDependency Status](https://david-dm.org/CleverStack/clever-injector/dev-status.png)](https://david-dm.org/CleverStack/clever-injector#info=devDependencies) [![Code Climate](https://codeclimate.com/github/CleverStack/clever-injector.png)](https://codeclimate.com/github/CleverStack/clever-injector) 
+[![Build Status](https://secure.travis-ci.org/CleverStack/clever-injector.png?branch=master)](https://travis-ci.org/CleverStack/clever-injector) 
+[![Coverage](https://codeclimate.com/github/CleverStack/clever-injector/coverage.png)](https://codeclimate.com/github/CleverStack/clever-injector) [![NPM downloads](http://img.shields.io/npm/dm/clever-injector.png)](https://www.npmjs.org/package/clever-injector) 
 
 ![CleverStack Node Seed](http://cleverstack.github.io/assets/img/logos/node-seed-logo-clean.png "CleverStack Node Seed")
 
@@ -26,6 +28,19 @@ var injector = CleverInjector( __dirname + '/src', __dirname + '/config );
 injector.instance( 'config', config );
 injector.instance( 'models', models );
 injector.instance( 'db', db );
+
+// You can get instances like this
+var config = injector.getInstance( 'config' );
+
+// You can inject functions and name them like this
+injector.inject( 
+	function( config, models ) {
+	    return {}; // Return whatever resource you are defining
+	},
+	function( Resource ) {
+		injector.instance( 'Resource', Resource );
+	}
+);
 ```
 
 ### Writing files
