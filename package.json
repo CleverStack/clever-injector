@@ -1,7 +1,7 @@
 {
     "name": "clever-injector",
     "description": "Lightning-fast flexible non-blocking Dependency Injection.",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "private": false,
     "repository":
     { 
