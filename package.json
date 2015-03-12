@@ -1,7 +1,7 @@
 {
     "name":         "clever-injector",
     "description":  "Lightning-fast flexible non-blocking Dependency Injection.",
-    "version":      "1.0.2",
+    "version":      "1.0.3",
     "main":         "injector.js",
     "author": {
         "name":     "CleverStack",
@@ -38,7 +38,7 @@
     "license":      "MIT",
     "dependencies": {
         "async"     : "~0.9.0",
-        "underscore": "~1.7.0"
+        "underscore": "~1.8.2"
     },
     "devDependencies": {
 
