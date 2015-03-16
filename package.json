@@ -32,12 +32,12 @@
   "keywords": [
     "di",
     "dependency",
-    "injection"
+    "injection",
     "injector",
     "inject",
     "autowire",
     "configuration",
-    "inversion of control",
+    "inversion-of-control",
     "ioc",
     "middlewares",
     "express",
