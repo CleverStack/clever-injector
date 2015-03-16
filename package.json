@@ -44,6 +44,6 @@
 
     },
     "scripts": {
-        "test":     "grunt test:unit"
+        "test":     "mocha test"
     }
 }

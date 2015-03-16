@@ -100,7 +100,7 @@ injector.prototype._inject = function( fn, cb ) {
         });
     });
 
-    async.map( 
+    async.map(
         names,
         function( name, cb ) {
             var instance;
@@ -153,7 +153,11 @@ injector.prototype._resolve = function( name, cb ) {
         }
 
         if ( !factory ) {
-            return cb( new Error( "can't find factory for " + name ), name );
+            if ( name[0] !== '$' ) {
+                return cb( new Error( "can't find factory for " + name ), name );
+            } else {
+                return cb( null, name, null );
+            }
         }
     }
 
