@@ -27,7 +27,8 @@
     "underscore"    : "~1.8.2"
   },
   "devDependencies": {
-    "mocha"         : "^2.2.1"
+    "mocha"         : "^2.2.1",
+    "should"        : "^5.2.0"
   },
   "keywords": [
     "di",
