@@ -51,7 +51,7 @@
   "validthis"   : true,
   "quotmark"    : "single",
   "camelcase"   : true,
-  "indent"      : 4,
+  "indent"      : 2,
   "newcap"      : true,
   "noempty"     : false,
   "nonew"       : true,

@@ -227,7 +227,7 @@ describe('utils.injector( [serviceDir] )', function () {
     app.inject(function(service1, optionaldep1, $optionaldep2) {
       service1.name.should.equal('service1');
       optionaldep1.name.should.equal('optionaldep1');
-      // should($optionaldep2).not.be.ok;
+      should($optionaldep2).not.be.ok;
       done();
     });
   });

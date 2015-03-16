@@ -1,49 +1,49 @@
 {
-    "name":         "clever-injector",
-    "description":  "Lightning-fast flexible non-blocking Dependency Injection.",
-    "version":      "1.0.3",
-    "main":         "injector.js",
-    "author": {
-        "name":     "CleverStack",
-        "email":    "cleverstack@rgnconsulting.com.au",
-        "web":      "http://cleverstack.io"
-    },
-    "collaborators": [
-        "Richard Gustin <richard.gustin86@gmail.com>"
-    ],
-    "repository": {
-        "type":     "git",
-        "url":      "https://github.com/CleverStack/clever-injector.git"
-    },
-    "bugs": {
-        "url":      "https://github.com/CleverStack/clever-injector/issues"
-    },
-    "keywords": [
-        "di",
-        "dependency",
-        "dependency injection",
-        "dependency injector",
-        "injection",
-        "injector",
-        "inject",
-        "autowire",
-        "configuration",
-        "inversion of control",
-        "ioc",
-        "middlewares",
-        "express",
-        "node-di",
-        "cleverstack"
-    ],
-    "license":      "MIT",
-    "dependencies": {
-        "async"     : "~0.9.0",
-        "underscore": "~1.8.2"
-    },
-    "devDependencies": {
-
-    },
-    "scripts": {
-        "test":     "mocha test"
-    }
+  "name"        : "clever-injector",
+  "description" : "Lightning-fast flexible non-blocking Dependency Injection.",
+  "version"     : "1.0.3",
+  "license"     : "MIT",
+  "main"        : "injector",
+  "author": {
+    "name"      : "CleverStack",
+    "email"     : "cleverstack@rgnconsulting.com.au",
+    "web"       : "http://cleverstack.io"
+  },
+  "collaborators": [
+    "Richard Gustin <richard.gustin86@gmail.com>"
+  ],
+  "repository": {
+    "type"      : "git",
+    "url"       : "https://github.com/CleverStack/clever-injector.git"
+  },
+  "bugs": {
+    "url"       : "https://github.com/CleverStack/clever-injector/issues"
+  },
+  "scripts": {
+    "test"      : "mocha test"
+  },
+  "dependencies": {
+    "async"         : "~0.9.0",
+    "underscore"    : "~1.8.2"
+  },
+  "devDependencies": {
+    "mocha"         : "^2.2.1"
+  },
+  "keywords": [
+    "di",
+    "dependency",
+    "dependency injection",
+    "dependency injector",
+    "injection",
+    "injector",
+    "inject",
+    "autowire",
+    "configuration",
+    "inversion of control",
+    "ioc",
+    "middlewares",
+    "express",
+    "node-di",
+    "cleverstack"
+  ]
 }
