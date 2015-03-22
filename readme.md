@@ -12,40 +12,54 @@ NodeJS Dependency Injection for the CleverStack ecosystem, designed to work with
 If you are using the CleverStack framework you do not need to install or setup the injector, CleverStack comes out of the box with the injector ready to use.
 
 ### Features
-1. Non-blocking and fully async
-2. Load's resources based upon name for you and injects dependencies
-3. Will never load the same resource more than once, it uses the one singular instance for all dependencies
+1. Simple, declarative dependency injection.
+2. Lightning-fast and fully asynchronous. (non-blocking).
+3. Will never load the same resource more than once.
+4. Load's resources (from multiple directories) based upon filename for you, then resolves & injects dependencies automatically. (even if your depedencies have dependencies of their own).
+5. Ability to create Child Containers. (Container Hierarchy, child/sub injectors).
+7. Optional Dependencies. (with the $ suffix).
+8. Supports Factories for automatic Service creation. (with the Factory suffix).
+
+### Introduction
+If you are building complex applications it can become very difficult to load files (often multiple times across multiple files), manage object lifetimes, loading/resolution of dependencies (etc)... Which can be very complex for large applications or as applications grow.
+
+With CleverInjector, you create a container and tell it where to find files, and register any factories/services/resources that are available (that can't be resolved by filename). 
+
+Then when you define files, you should export a function with it's dependencies as named arguments, these will be resolved and injected automatically for you. (even if those depedencies have dependencies of their own), and finally you should (inside that function) add new instances to the injector.
+
 
 ### Install 
 ```
 npm i clever-injector
 ```
 
-### Setup injector instance
+### Setup injector container
 ```
-var CleverInjector = require( 'clever-injector' );
+var CleverInjector = require('clever-injector');
 
 // You can add directories so that the injector can try to load the resources by name,
 // this example presumes you have a folder called src with a file named Example.js
-var injector = CleverInjector( __dirname + '/src', __dirname + '/config );
+var injector = CleverInjector(__dirname + '/src', __dirname + '/config);
 
 // You can add instances to the injector like this
-injector.instance( 'config', config );
-injector.instance( 'models', models );
-injector.instance( 'db', db );
+injector.instance('config', config);
+injector.instance('models', models);
+injector.instance('db', db);
 
 // You can get instances like this
-var config = injector.getInstance( 'config' );
+var config = injector.getInstance('config');
 
 // You can inject functions and name them like this
 injector.inject( 
-	function( config, models ) {
+	function(config, models) {
 	    return {}; // Return whatever resource you are defining
 	},
-	function( Resource ) {
-		injector.instance( 'Resource', Resource );
+	function(Resource) {
+		injector.instance('Resource', Resource);
 	}
 );
+// Which yield's being able to get them like this
+var Resource = injector.getInstance('Resource');
 ```
 
 ### Writing files
@@ -55,7 +69,8 @@ module.exports = function( db ) {
    return {};
 };
 ```
-### Use injector
+
+### Using injector.inject()
 ```js
 injector.inject( function( Example, models, config ) {
    // this function will be called asynchronously after all required modules are initialized and/or loaded.
